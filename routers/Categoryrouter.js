@@ -35,9 +35,9 @@ const ZteController = require('../controller/ZteController');
 const ZteDevice = require('../controller/Devicepage/ZteDevice');
 const AlcatelController = require('../controller/AlcatelController');
 const AlcatelDevice = require('../controller/Devicepage/AlcatelDevice');
+const AllDevicesController = require('../controller/alldevices/AllDevicesController');
 
-
-
+Router.post('/device', database, AllDevicesController);
 Router.get('/apple/:index1/:index2', database, applecontroller);
 Router.get('/apple/:device_id', database, appledevice);
 Router.get('/samsung/:index1/:index2', database, samsungcontroller);
